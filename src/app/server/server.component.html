@@ -1,3 +1,12 @@
-<p>
-  server works!
-</p>
+<label>Server Name</label>
+<hr>
+<input type="text" class="form-control" 
+  (input)="onServerUpdated($event)" >
+  <p>{{ updatedServer }}</p>
+<button class="btn btn-primary"
+  [disabled]="!allowedNewServer"
+    (click)="onServerSubmit()"
+      >Add Server
+
+</button>
+<p>{{ serverCreated }}</p>
